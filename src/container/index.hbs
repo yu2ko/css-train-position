@@ -10,6 +10,11 @@
     </div>
   </div>
 </div>
+<div class="box"><pre>.task1 .item {
+  position: absolute;
+  left: 200px;
+  top: 150px;
+}<br></pre></div>
 
 {{> title header='Завдання 2' description='В елементі .task2 спозиціонуйте елемент .item посередині батьківсього елемента (ширина і висота елемента 80px)'}} 
 <div class="block">
@@ -21,7 +26,12 @@
       </div>
     </div>
   </div>
-</div> 
+</div>
+<div class="box"><pre>.task2 .item {
+  position: absolute;
+  left: calc(100% / 2 - 40px);
+  top: calc(100% / 2 - 40px);
+}<br></pre></div> 
 
  {{> title header='Завдання 3' description='В елементі .task3 зафіксуйте елемент .item в лівому верхньому краю сторінки'}} 
 <div class="wrapper ">
@@ -33,6 +43,11 @@
     </div>
   </div>
 </div>
+<div class="box"><pre>.task3 .item {
+  position: absolute;
+  top: 0;
+  left: 0;
+}<br></pre></div>
 
  {{> title header='Завдання 4' description='В елементі .task4 зафіксуйте елемент .item зверху по центру (використовуйте calc(), ширина елемента 80px) відносно батьківського елемента так щоб він залишався на місці при прокрутці контейнера'}} 
 <div class="block">
@@ -40,11 +55,22 @@
   <div class="wrapper">
     <div class="container container4">
       <div class='task4 task'>
-        <div class='item '> </div>
+        <div class='item'> </div>
       </div>
     </div>
   </div>
 </div>
+<div class="box"><pre>.container4 {
+  overflow: scroll;
+}
+.task4 {
+  width: 1000px;
+}
+.task4 .item {
+  position: sticky;
+  top: 0;
+  left: calc(100% / 2 - 40px);
+}<br></pre></div>
 
  {{> title header='Завдання 5' description='В елементі .task5 розмістіть елементи .item як на картинці'}} 
 <div class="block">
@@ -62,7 +88,23 @@
     </div>
   </div>
 </div>
-
+<div class="box"><pre>.task5 .item1 {
+  background-color: red;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+}
+.task5 .item2 {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.task5 .item3 {
+  background-color: green;
+  position: absolute;
+  z-index: 2;
+}<br></pre></div>
 
  {{> title header='Завдання 6' description='В елементі .task6 вирівняйте елементи .item по лівій стороні з обтіканням тексту'}} 
 <div class="block">
@@ -77,6 +119,9 @@
     </div>
   </div>
 </div>
+<div class="box"><pre>.task6 .item {
+  float: left;
+}<br></pre></div>
 
  {{> title header='Завдання 7' description='В елементі .task7 вирівняйте елементи .item по правій стороні з обтіканням тексту'}} 
 <div class="block">
@@ -91,6 +136,9 @@
     </div>
   </div>
 </div>
+<div class="box"><pre>.task7 .item {
+  float: right;
+}<br></pre></div>
 
  {{> title header='Завдання 8' description='Зробіть щоб в елементі .task8 елемент .elem не обтікались'}} 
 <div class="block">
@@ -106,6 +154,16 @@
     </div>
   </div>
 </div>
+<div class="box"><pre>.task8 .item1 {
+  float: left;
+}
+.task8 .item2 {
+  height: 120px;
+  float: right;
+}
+.task8 p {
+  clear: both;
+}<br></pre></div>
 
  {{> title header='Завдання 9' description='Зробіть щоб в елементі .task9 елемент  .elem не обтікались справа'}} 
 <div class="block">
@@ -121,6 +179,16 @@
     </div>
   </div>
 </div>
+<div class="box"><pre>.task9 .item1 {
+  height: 200px;
+  float: left;
+}
+.task9 .item2 {
+  float: right;
+}
+.task9 p {
+  clear: right;
+}<br></pre></div>
 
  {{> title header='Завдання 10' description='Зробіть щоб в елементі .task10 елемент .elem не обтікались зліва'}} 
 <div class="block">
@@ -136,6 +204,16 @@
     </div>
   </div>
 </div>
+<div class="box"><pre>.task10 .item1 {
+  float: left;
+}
+.task10 .item2 {
+  float: right;
+  height: 210px;
+}
+.task10 p {
+  clear: left;
+}<br></pre></div>
 
  {{> title header='Завдання 11' description='Зробіть щоб в елементі .task11 зображення .img-item було зменшене або розтягнуте для того, щоб поміститись повністю в контейнері зі збереженням пропорцій сторін'}} 
 <div class="block">
@@ -148,6 +226,11 @@
     </div>
   </div>
 </div>
+<div class="box"><pre>.task11 .img-item {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}<br></pre></div>
 
  {{> title header='Завдання 12' description='Зробіть щоб в елементі .task12 зображення .img-item було збільшене або зменшене, щоб заповнити контейнер зі збереженням пропорцій сторін, але може бути обрізане'}} 
 <div class="block">
@@ -160,6 +243,11 @@
     </div>
   </div>
 </div>
+<div class="box"><pre>.task12 .img-item {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}<br></pre></div>
 
  {{> title header='Завдання 13' description='Розтяніть в елементі .task13 зображення .img-item для заповнення всього контейнера'}} 
 <div class="block">
@@ -172,6 +260,11 @@
     </div>
   </div>
 </div>
+<div class="box"><pre>.task13 .img-item {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}<br></pre></div>
 
  {{> title header='Завдання 14' description='Зробіть щоб в елементі .task14 зображення .img-item було зменшене, якщо воно більше контейнера, але не буде розтягнуте, якщо воно менше контейнера'}} 
 <div class="block">
@@ -184,6 +277,11 @@
     </div>
   </div>
 </div>
+<div class="box"><pre>.task14 .img-item {
+  height: 100%;
+  width: 100%;
+  object-fit: scale-down;
+}<br></pre></div>
 
  {{> title header='Завдання 15' description='Розмістіть в елементі .task15 зображення .img-item вертикально по центру та горизонтально справа'}} 
 <div class="block">
@@ -196,6 +294,12 @@
     </div>
   </div>
 </div>
+<div class="box"><pre>.task15 .img-item {
+  height: 100%;
+  width: 100%;
+  object-fit: none;
+  object-position: center right;
+}<br></pre></div>
 
  {{>  title header='Завдання 16' description='Розмістіть в елементі .task16 зображення .img-item в лівому верхому куті'}} 
 <div class="block">
@@ -208,6 +312,12 @@
     </div>
   </div>
 </div>
+<div class="box"><pre>.task16 .img-item {
+  height: 100%;
+  width: 100%;
+  object-fit: none;
+  object-position: top left;
+}<br></pre></div>
 
  {{>  title header='Завдання 17' description='Розмістіть в елементі .task17 зображення вертикально знизу та горизонтально по центру'}} 
 <div class="block">
@@ -220,6 +330,12 @@
     </div>
   </div>
 </div>
+<div class="box"><pre>.task17 .img-item {
+  height: 100%;
+  width: 100%;
+  object-fit: none;
+  object-position: bottom center;
+}<br></pre></div>
 
  {{>  title header='Завдання 18' description='Розмістіть в елементі .task18 зображення .img-item в 40px від лівого боку, та в 25px зверху'}} 
 <div class="block">
@@ -232,6 +348,12 @@
     </div>
   </div>
 </div>
+<div class="box"><pre>.task18 .img-item {
+  height: 100%;
+  width: 100%;
+  object-fit: none;
+  object-position: 40px 25px;
+}<br></pre></div>
 
  {{>  title header='Завдання 19' description='В елементі .task19 розмістіть зображення .img-item по центру'}} 
 <div class="block">
@@ -244,6 +366,12 @@
     </div>
   </div>
 </div>
+<div class="box"><pre>.task19 .img-item {
+  height: 100%;
+  width: 100%;
+  object-fit: none;
+  object-position: center center;
+}<br></pre></div>
 
  {{> title header='Завдання 20' description='Забороніть користовувачу виділяти текст в елементі .task20'}} 
 <div class="wrapper">
@@ -253,6 +381,9 @@
     </div>
   </div>
 </div>
+<div class="box"><pre>.task20 {
+  user-select: none;
+}<br></pre></div>
 
  {{> title header='Завдання 21' description='Зробіть щоб при виділенні виділялись всі дочірні елементи .task21'}} 
 <div class="wrapper">
@@ -264,6 +395,9 @@
     </div>
   </div>
 </div>
+<div class="box"><pre>.task21 {
+  user-select: all;
+}<br></pre></div>
 
  {{> title header='Завдання 22' description='Для елементу .task22 встановіть синій курсор редагування'}} 
 <div class="wrapper">
@@ -273,7 +407,15 @@
     </div>
   </div>
 </div>
+<div class="box"><pre>.task22 {
+  caret-color: blue;
+}<br></pre></div>
 
  {{> title header='Завдання 23' description='Встановить для html елемента плавне прокручення'}} 
       <a href="#page_start">Натисни для переходу</a>
+<br>
+<br>
+<div class="box"><pre>html {
+  scroll-behavior: smooth;
+}<br></pre></div>
 

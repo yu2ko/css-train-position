@@ -1,118 +1,190 @@
+/* 'Завдання 1' description='В елементі .task1 пересуньте елемент .item на 200px вправо та на 150px вниз відносо початкового положення' */
 .task1 .item {
+  position: absolute;
+  left: 200px;
+  top: 150px;
 }
 
+/* 'Завдання 2' description='В елементі .task2 спозиціонуйте елемент .item посередині батьківсього елемента (ширина і висота елемента 80px)' */
 .task2 .item {
+  position: absolute;
+  left: calc(100% / 2 - 40px);
+  top: calc(100% / 2 - 40px);
 }
 
+/* 'Завдання 3' description='В елементі .task3 зафіксуйте елемент .item в лівому верхньому краю сторінки' */
 .task3 .item {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
+/* 'Завдання 4' description='В елементі .task4 зафіксуйте елемент .item зверху по центру (використовуйте calc(), 
+ширина елемента 80px) відносно батьківського елемента так щоб він залишався на місці при прокрутці контейнера' */
 .container4 {
+  overflow: scroll;
 }
-
 .task4 {
   width: 1000px;
 }
 .task4 .item {
+  position: sticky;
+  top: 0;
+  left: calc(100% / 2 - 40px);
 }
 
+/* 'Завдання 5' description='В елементі .task5 розмістіть елементи .item як на картинці' */
 .task5 .item1 {
   background-color: red;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
 }
 .task5 .item2 {
+  position: absolute;
+  top: 40px;
+  left: 40px;
 }
 .task5 .item3 {
   background-color: green;
+  position: absolute;
+  z-index: 2;
 }
 
+/* 'Завдання 6' description='В елементі .task6 вирівняйте елементи .item по лівій стороні з обтіканням тексту' */
 .task6 .item {
+  float: left;
 }
 
+/* 'Завдання 7' description='В елементі .task7 вирівняйте елементи .item по правій стороні з обтіканням тексту' */
 .task7 .item {
+  float: right;
 }
 
+/* 'Завдання 8' description='Зробіть щоб в елементі .task8 елемент .elem не обтікались' */
 .task8 .item1 {
+  float: left;
 }
 .task8 .item2 {
   height: 120px;
+  float: right;
 }
-
 .task8 p {
+  clear: both;
 }
 
+/* 'Завдання 9' description='Зробіть щоб в елементі .task9 елемент  .elem не обтікались справа' */
 .task9 .item1 {
   height: 200px;
+  float: left;
 }
 .task9 .item2 {
+  float: right;
 }
 .task9 p {
+  clear: right;
 }
 
+/* 'Завдання 10' description='Зробіть щоб в елементі .task10 елемент .elem не обтікались зліва' */
 .task10 .item1 {
+  float: left;
 }
 .task10 .item2 {
+  float: right;
+  height: 210px;
 }
 .task10 p {
+  clear: left;
 }
 
+/* 'Завдання 11' description='Зробіть щоб в елементі .task11 зображення .img-item було зменшене або розтягнуте для того, 
+щоб поміститись повністю в контейнері зі збереженням пропорцій сторін' */
 .task11 .img-item {
   height: 100%;
   width: 100%;
+  object-fit: contain;
 }
 
+/* 'Завдання 12' description='Зробіть щоб в елементі .task12 зображення .img-item було збільшене або зменшене, 
+щоб заповнити контейнер зі збереженням пропорцій сторін, але може бути обрізане' */
 .task12 .img-item {
   height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 
+/* 'Завдання 13' description='Розтяніть в елементі .task13 зображення .img-item для заповнення всього контейнера' */
 .task13 .img-item {
   height: 100%;
   width: 100%;
+  object-fit: fill;
 }
 
+/* 'Завдання 14' description='Зробіть щоб в елементі .task14 зображення .img-item було зменшене, якщо воно більше контейнера, 
+але не буде розтягнуте, якщо воно менше контейнера' */
 .task14 .img-item {
   height: 100%;
   width: 100%;
+  object-fit: scale-down;
 }
 
+/* 'Завдання 15' description='Розмістіть в елементі .task15 зображення .img-item вертикально по центру та горизонтально справа' */
 .task15 .img-item {
   height: 100%;
   width: 100%;
   object-fit: none;
+  object-position: center right;
 }
 
+/* 'Завдання 16' description='Розмістіть в елементі .task16 зображення .img-item в лівому верхому куті' */
 .task16 .img-item {
   height: 100%;
   width: 100%;
   object-fit: none;
+  object-position: top left;
 }
 
+/* 'Завдання 17' description='Розмістіть в елементі .task17 зображення вертикально знизу та горизонтально по центру' */
 .task17 .img-item {
   height: 100%;
   width: 100%;
   object-fit: none;
+  object-position: bottom center;
 }
 
+/* 'Завдання 18' description='Розмістіть в елементі .task18 зображення .img-item в 40px від лівого боку, та в 25px зверху' */
 .task18 .img-item {
   height: 100%;
   width: 100%;
   object-fit: none;
+  object-position: 40px 25px;
 }
 
+/* 'Завдання 19' description='В елементі .task19 розмістіть зображення .img-item по центру' */
 .task19 .img-item {
   height: 100%;
   width: 100%;
   object-fit: none;
+  object-position: center center;
 }
 
+/* 'Завдання 20' description='Забороніть користовувачу виділяти текст в елементі .task20' */
 .task20 {
+  user-select: none;
 }
 
+/* 'Завдання 21' description='Зробіть щоб при виділенні виділялись всі дочірні елементи .task21' */
 .task21 {
+  user-select: all;
 }
 
+/* 'Завдання 22' description='Для елементу .task22 встановіть синій курсор редагування' */
 .task22 {
+  caret-color: blue;
 }
 
+/* 'Завдання 23' description='Встановить для html елемента плавне прокручення' */
 html {
+  scroll-behavior: smooth;
 }
